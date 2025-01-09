@@ -29,14 +29,14 @@
 
     <script>
         // Define the Alpine.js component for confetti
-        function confettiComponent() {
+        const confettiComponent = ()=> {
             return {
                 startConfettiEffect() {
                     const duration = 15 * 1000; // Duration in milliseconds
                     const animationEnd = Date.now() + duration;
                     const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
-                    function randomInRange(min, max) {
+                    const randomInRange = (min, max) => {
                         return Math.random() * (max - min) + min;
                     }
 
